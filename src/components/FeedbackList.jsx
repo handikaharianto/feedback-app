@@ -19,7 +19,7 @@ FeedbackList.propTypes = {
   // the feedback is an array of particular shape that contains id, rating, text
   feedback: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.number.isRequired,
+      id: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
       rating: PropTypes.number.isRequired,
       text: PropTypes.string.isRequired,
     })
