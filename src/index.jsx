@@ -3,10 +3,16 @@ import ReactDOM from 'react-dom'
 import './index.css'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
+import { BrowserRouter } from 'react-router-dom'
+import { FeedbackProvider } from './context/FeedbackContext'
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <FeedbackProvider>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </FeedbackProvider>
   </React.StrictMode>,
   document.getElementById('root')
 )
